@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "capabilities": [
+    {
+      "name": "bytes.identity",
+      "contract_version": "1.0.0",
+      "available": true,
+      "artifact": {
+        "format": "native-so",
+        "identity": "@ARTIFACT_IDENTITY@",
+        "path": "@ARTIFACT_PATH@",
+        "target": "@TARGET@",
+        "bloom_primitive_abi": {
+          "base": 65536
+        }
+      },
+      "input": {
+        "representation": "vbuf-v0.6"
+      },
+      "output": {
+        "representation": "vbuf-v0.6"
+      },
+      "deterministic": true,
+      "effects": [],
+      "streaming": {
+        "input": false,
+        "output": false,
+        "materialization": "full-input",
+        "output_start": "after-input-validation"
+      }
+    }
+  ]
+}

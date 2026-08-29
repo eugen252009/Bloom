@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "capabilities": [
+    {
+      "name": "math.argsort.u32",
+      "contract_version": "1.0.0",
+      "available": true,
+      "artifact": {
+        "format": "native-so",
+        "identity": "@ARTIFACT_IDENTITY@",
+        "path": "@ARTIFACT_PATH@",
+        "target": "@TARGET@",
+        "bloom_primitive_abi": {
+          "base": 65536
+        }
+      },
+      "execution": {
+        "family": "workspace",
+        "version": 65536,
+        "query": "bloom_primitive_workspace_required",
+        "run": "bloom_primitive_run_vbuf_workspace"
+      },
+      "input": {
+        "representation": "vbuf-v0.6 single-block unsigned-u32 array"
+      },
+      "output": {
+        "representation": "vbuf-v0.6 key-0 single-block unsigned-u64 array permutation"
+      },
+      "deterministic": true,
+      "effects": [],
+      "streaming": {
+        "input": false,
+        "output": false,
+        "materialization": "full-input",
+        "output_start": "after-full-input"
+      }
+    }
+  ]
+}
